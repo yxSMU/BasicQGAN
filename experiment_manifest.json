@@ -1,0 +1,76 @@
+{
+  "mnist16_main_noancilla": {
+    "role": "training",
+    "script": "training/train16size_Fullunitary_0.py",
+    "parameters": {}
+  },
+  "mnist16_eval_noancilla": {
+    "role": "testing",
+    "script": "testing/train16x16_test_fid_kid_Fullunitary.py",
+    "parameters": {}
+  },
+  "mnist16_ancilla_ablation": {
+    "role": "training",
+    "script": "training/train16size_0.py",
+    "parameters": {}
+  },
+  "mnist16_eval_ancilla": {
+    "role": "testing",
+    "script": "testing/train16x16_test_fid_kid_0.py",
+    "parameters": {}
+  },
+  "mnist28_main_noancilla": {
+    "role": "training",
+    "script": "training/train28size_Fullunitary.py",
+    "parameters": {}
+  },
+  "letters16_main_noancilla": {
+    "role": "training",
+    "script": "training/train_emnist_letters_Fullunitary.py",
+    "parameters": {}
+  },
+  "letters16_eval_noancilla": {
+    "role": "testing",
+    "script": "testing/train_emnist_letters_Fullunitary_test.py",
+    "parameters": {}
+  },
+  "mnist16_prior_uniform_pi": {
+    "role": "training/ablation",
+    "script": "training/train16size_Fullunitary_0.py",
+    "parameters": {
+      "--classes": "0",
+      "--prior": "uniform_pi"
+    }
+  },
+  "mnist16_prior_uniform_1": {
+    "role": "training/ablation",
+    "script": "training/train16size_Fullunitary_0.py",
+    "parameters": {
+      "--classes": "0",
+      "--prior": "uniform_1"
+    }
+  },
+  "mnist16_prior_narrow": {
+    "role": "training/ablation",
+    "script": "training/train16size_Fullunitary_0.py",
+    "parameters": {
+      "--classes": "0",
+      "--prior": "narrow"
+    }
+  },
+  "mnist28_eval_noancilla": {
+    "role": "testing",
+    "script": "testing/train16x16_test_fid_kid_Fullunitary.py",
+    "parameters": {}
+  },
+  "pqwgan_global_16": {
+    "role": "training/baseline",
+    "script": "training/pqwgan_global_16.py",
+    "parameters": {}
+  },
+  "pqwgan_global_16_eval": {
+    "role": "testing/baseline",
+    "script": "testing/pqwgan_global_16_eval.py",
+    "parameters": {}
+  }
+}
